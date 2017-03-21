@@ -1,0 +1,8 @@
+{
+  "name": "select-a-structure",
+  "description": "A select field for Kirby populated by a structure field.",
+  "author": "Caleb Grove <caleb@grovedesign.co>",
+  "version": "1.0",
+  "type": "kirby-plugin",
+  "license": "MIT"
+}
