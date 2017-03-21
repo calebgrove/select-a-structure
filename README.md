@@ -38,8 +38,8 @@ You'll want to change these required options:
 <dt><code>structurefield:</code></dt>
 <dd>The name of the structure field found on <code>structurepage</code>.</dd>
 
-<dt><code>selectkey:</code></dt>
-<dd>The name of the field <strong>inside</strong> the structure used for the human-readable names in the select field.</dd>
+<dt><code>optionkey:</code></dt>
+<dd>The name of the field <strong>inside</strong> the structure used for the options in the select field.</dd>
 </dl>
 
 ## Usage
