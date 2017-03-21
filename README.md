@@ -33,13 +33,13 @@ You'll want to change these required options:
 
 <dl>
 <dt><code>structurepage:</code></td>
-<dd>The URI of the page that hosts the structure field. You can use subpages too, like this: `page/subpage`</dd>
+<dd>The URI of the page that hosts the structure field. You can use subpages too, like this: <code>page/subpage</code></dd>
 
 <dt><code>structurefield:</code></dt>
-<dd>The name of the structure field found on `structurepage`.</dd>
+<dd>The name of the structure field found on <code>structurepage</code>.</dd>
 
 <dt><code>selectkey:</code></dt>
-<dd>The name of the field **inside** the structure used for the human-readable names in the select field.</dd>
+<dd>The name of the field <strong>inside</strong> the structure used for the human-readable names in the select field.</dd>
 </dl>
 
 ## Usage
