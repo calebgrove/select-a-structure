@@ -50,7 +50,12 @@ class SelectAStructureField extends BaseField {
 		}
 
 		// First, let's pull the page and field from the blueprint.
-		$structurepage = page($this->structurepage());
+		if($this->structurepage() == '/') {
+		    $structurepage = site();
+		}
+		else {
+		    $structurepage = page($this->structurepage());
+		}
 		$structurefield = $this->structurefield();
 		$structurefield = $structurepage->$structurefield();
 		$optionkey = $this->optionkey();
