@@ -52,6 +52,8 @@ class SelectAStructureField extends BaseField {
 		// First, let's pull the page and field from the blueprint.
 		if($this->structurepage() == '/') {
 		    $structurepage = site();
+		} else if(!$this->structurepage()) {
+			$structurepage = $this->page();
 		}
 		else {
 		    $structurepage = page($this->structurepage());

@@ -33,7 +33,7 @@ You'll want to change these required options:
 
 <dl>
 <dt><code>structurepage:</code></td>
-<dd>The URI of the page that hosts the structure field. You can use subpages too, like this: <code>page/subpage</code>. To point to the <code>site()</code> page, simply use <code>/</code></dd>
+<dd>The URI of the page that hosts the structure field. You can use subpages too, like this: <code>page/subpage</code>. The current page can by selected by leaving this blank. To point to the <code>site()</code> page, use <code>/</code></dd>
 
 <dt><code>structurefield:</code></dt>
 <dd>The name of the structure field found on <code>structurepage</code>.</dd>
