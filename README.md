@@ -39,7 +39,14 @@ You'll want to change these required options:
 <dd>The name of the structure field found on <code>structurepage</code>.</dd>
 
 <dt><code>optionkey:</code></dt>
-<dd>The name of the field <strong>inside</strong> the structure used for the options in the select field.</dd>
+<dd>The name of the field(s) <strong>inside</strong> the structure used for the options in the select field. May be a comma-separated list of fields, too.</dd>
+</dl>
+
+There's one additional option that is not required:
+
+<dl>
+<dt><code>optiondivider:</code></dt>
+<dd>Divider between different fields in the option in the select field. Use apostrophes to allow spaces in the divider, e.g. `', '` to get comma and a space after it. Defaults to ` — `.</dd>
 </dl>
 
 ## Usage
