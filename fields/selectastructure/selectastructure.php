@@ -63,7 +63,7 @@ class SelectAStructureField extends BaseField {
 		// Get optionkey as array of keys
 		$optionkey = str::split($this->optionkey());
 		// Get optiondivider if is set, fallback to ', ' as default
-		$optiondivider = $this->optiondivider() != null ? $this->optiondivider() : ', ';
+		$optiondivider = $this->optiondivider() != null ? $this->optiondivider() : ' — ';
 
 		// If the strucure field exists, toStrucure() it.
 		if($this->page($structurepage)->field($structurefield)) {
@@ -74,7 +74,7 @@ class SelectAStructureField extends BaseField {
 		foreach($structure as $entry)  {
 			$option = '';
 			foreach($optionkey as $key) {
-				if($entry->$key()->isNotEmpty()) {
+				if($entry->$key() != '') {
 					// Add a key to option name and prepend $optiondivider
 					$option = $option . $optiondivider . $entry->$key();
 				}
