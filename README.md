@@ -46,7 +46,7 @@ There's one additional option that is not required:
 
 <dl>
 <dt><code>optiondivider:</code></dt>
-<dd>Divider between different fields in the option in the select field. Use apostrophes to allow spaces in the divider, e.g. `', '` to get comma and a space after it. Defaults to ` — `.</dd>
+<dd>Divider between different fields in the option in the select field. Use apostrophes to allow spaces in the divider, e.g. <code>', '</code> to get comma and a space after it. Defaults to <code> — </code>.</dd>
 </dl>
 
 ## Usage
