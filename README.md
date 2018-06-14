@@ -26,7 +26,8 @@ fieldname:
   type: selectastructure
   structurepage: staffpage
   structurefield: stafflist
-  optionkey: staffname
+  optionkey: staffname, staffsurname
+  optiondivider: ','
 ~~~~
 
 You'll want to change these required options:
@@ -40,6 +41,7 @@ You'll want to change these required options:
 
 <dt><code>optionkey:</code></dt>
 <dd>The name of the field(s) <strong>inside</strong> the structure used for the options in the select field. May be a comma-separated list of fields, too.</dd>
+
 </dl>
 
 There's one additional option that is not required:
