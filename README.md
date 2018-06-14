@@ -26,6 +26,7 @@ fieldname:
   type: selectastructure
   structurepage: staffpage
   structurefield: stafflist
+  optionid: uniqueId
   optionkey: staffname, staffsurname
   optiondivider: ','
 ~~~~
@@ -38,6 +39,9 @@ You'll want to change these required options:
 
 <dt><code>structurefield:</code></dt>
 <dd>The name of the structure field found on <code>structurepage</code>.</dd>
+
+<dt><code>optionid:</code></dt>
+<dd>The name of the field inside that structure field. It must contain unique values for each entry! It could be integers or hashes, or even your custom unique IDs—as long as they are unique!</dd>
 
 <dt><code>optionkey:</code></dt>
 <dd>The name of the field(s) <strong>inside</strong> the structure used for the options in the select field. May be a comma-separated list of fields, too.</dd>
