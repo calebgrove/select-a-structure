@@ -58,9 +58,12 @@ class SelectAStructureField extends BaseField {
 		else {
 		    $structurepage = page($this->structurepage());
 		}
+		// Below lines need serious refractoring
 		$structurefield = $this->structurefield();
 		$structurefield = $structurepage->$structurefield();
-		$optionkey = $this->optionkey();
+		$optionid = $this->optionid();
+		$optionkey = str::split($this->optionkey());
+		$optiondivider = $this->optiondivider() != null ? $this->optiondivider() : ', ';
 
 		// If the strucure field exists, toStrucure() it.
 		if($this->page($structurepage)->field($structurefield)) {
@@ -69,13 +72,21 @@ class SelectAStructureField extends BaseField {
 
 		// Build the list of options.
 		foreach($structure as $entry)  {
-			$entry = $entry->$optionkey();
-			$this->options[] = $entry;
+			$string = '';
+			foreach($optionkey as $key) {
+				if($entry->$key() != '') {
+					$string = $string . $optiondivider . $entry->$key();
+				}
+			}
+			if($entry->$optionid() != '') {
+				$optionidvalue = $entry->$optionid();
+			}
+			$this->options[$optionidvalue->value()] = str::substr($string, str::length($optiondivider)); // remove the unecessary divider in the beginning
 		}
 
 		// Add the options to the select field.
 		foreach($this->options() as $value => $text) {
-			$select->append($this->option($text, $text, $this->value() == $text));
+			$select->append($this->option($value, $text, $this->value() == $value));  // $this->value() == $value instead of $this->value() == $text
 		}
 
 		$inner = new Brick('div');
